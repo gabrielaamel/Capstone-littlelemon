@@ -4,5 +4,8 @@ from . import views
 #from django.conf import settings
 
 urlpatterns = [
-    path('',views.index, name='index')
+    path('',views.index, name='index'),
+    path('menu/items/', views.MenuItemView.as_view(), name='menu-items'),
+    path('menu/items/<int:pk>/', views.SingleMenuItemView.as_view(), name='single-menu-item'),
+    
 ]
